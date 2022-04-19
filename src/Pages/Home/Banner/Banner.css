@@ -1,0 +1,29 @@
+.banner {
+    background: url(../../../images/Banner/banner3.jpg) no-repeat center center / cover;
+    width: 100%;
+    height: 570px;
+}
+.banner-text{
+    font-family: sans-serif;
+    color: black;
+    text-align: justify;
+    margin-top: 107px;
+}
+.banner-text h1{
+    font-size: 68px;
+    line-height: 68px;
+    letter-spacing: 1;
+}
+.banner-text p{
+    font-size: 20px;
+    line-height: 22.8px;
+    margin-top: 12px;
+}
+.banner-text h4{
+    font-size: 26px;
+    line-height: 28.6px;
+    margin-top: 14px;
+}
+.btn-group{
+    margin-top: 12px;
+}
