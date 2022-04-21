@@ -14,7 +14,6 @@ const Services = () => {
         <div className='services'>
             <h1>SERVICES</h1>
             <div className='hr-line'>
-
             </div>
             <div className='service-container'>
                 {
