@@ -1,0 +1,14 @@
+.card img{
+    height: 270px;
+}
+.card button{
+    background-color:rgb(238, 102, 26);
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+    border-radius: 5px;
+}

@@ -1,0 +1,26 @@
+.services {
+    background-color: #161616;
+}
+
+.services h1 {
+    margin-top: 59px;
+    margin-bottom: 28px;
+    color: #ee661a;
+    text-align: center;
+}
+
+.services .hr-line {
+    margin: 0 auto 40px;
+    height: 2px;
+    width: 53px;
+    background: rgb(49, 48, 48);
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 53px;
+}
