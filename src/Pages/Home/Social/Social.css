@@ -1,5 +1,11 @@
+.social{
+    background-color: white;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding-top: 59px;
+    padding-bottom: 64px;
+    text-align: center;
+}
 .social h1{
-    margin-top: 59px;
     margin-bottom: 28px;
     color: #ee661a;
     text-align: center;
@@ -8,5 +14,9 @@
     margin: 0 auto 40px;
     height: 2px;
     width: 53px;
-    background: rgb(49, 48, 48);
+    background: rgb(148, 141, 141);
+}
+.social-site img{
+    width: 52px;
+    height: 52px;
 }

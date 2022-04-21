@@ -1,6 +1,9 @@
 .card img{
     height: 270px;
 }
+.card .price{
+    color:rgb(238, 102, 26);
+}
 .card button{
     background-color:rgb(238, 102, 26);
     border: none;

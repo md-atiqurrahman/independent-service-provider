@@ -10,7 +10,7 @@ const Service = ({ service }) => {
             <Card.Body>
                 <Card.Title>{name}</Card.Title>
                 <Card.Text>
-                  Price starting at: ${price}
+                  Price starting at: <span className='price'>${price}</span>
                 </Card.Text>
                 <Card.Text>
                     {description}
