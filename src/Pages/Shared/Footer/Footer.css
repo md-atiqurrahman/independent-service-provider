@@ -1,0 +1,21 @@
+footer{
+    background-color: #161616;
+    height: 172px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.copyright-text p{
+    margin-bottom: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+    color: white;
+    margin-left: 119px;
+}
+.web-maker p{
+    font-family: 'Nanum Gothic', sans-serif;
+    color: white;
+    margin-right: 119px;
+}
+.web-maker p .company-name{
+    color:#ee661a;
+}

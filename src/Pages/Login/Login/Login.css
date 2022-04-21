@@ -1,0 +1,11 @@
+.form-container{
+    width: 50%;
+    margin: 50px auto;
+}
+.signup-text{
+    margin-top: 15px;
+}
+.signup-link{
+    color: #ee661a;
+    text-decoration: none;
+}
