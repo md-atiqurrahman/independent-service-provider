@@ -21,7 +21,7 @@ const Header = () => {
         <Navbar bg="light" expand="lg" sticky='top'>
             <Container className='nav-text-container' >
                 <div>
-                    <Navbar.Brand href="#home" className='logo-container'>
+                    <Navbar.Brand href="#home">
                      <img src={logo} alt="" />
                     </Navbar.Brand>
                 </div>

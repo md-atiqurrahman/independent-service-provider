@@ -7,7 +7,7 @@ const Service = ({ service }) => {
     const {name, image, price, description } = service;
     const navigate = useNavigate();
     return (
-        <Card className='card' style={{ width: '18rem' }}>
+        <Card className='card'>
             <Card.Img variant="top" src={image} />
             <Card.Body>
                 <Card.Title>{name}</Card.Title>

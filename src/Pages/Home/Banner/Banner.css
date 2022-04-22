@@ -8,7 +8,7 @@
     font-family: 'Nanum Gothic', sans-serif;
     color: white;
     text-align: center;
-    margin-top: 107px;
+    margin-top: 130px;
 }
 
 .banner-text h1 {
@@ -27,7 +27,7 @@
 }
 
 .banner button {
-    background-color:rgb(238, 102, 26);
+    background-color: rgb(238, 102, 26);
     border: none;
     color: white;
     padding: 15px 32px;
@@ -37,4 +37,27 @@
     font-size: 16px;
     font-weight: bolder;
     border-radius: 5px;
+}
+
+@media only screen and (max-width: 290px) {
+
+    .banner-text h1 {
+        font-weight: 400;
+        font-size: 42px;
+        line-height: 74.4px;
+        letter-spacing: normal;
+    }
+    .banner{
+        height: 800px;
+    }
+}
+
+@media only screen and (min-width:291px)and (max-width: 688px) {
+    .banner {
+        height: 700px;
+    }
+
+    .banner-text {
+        margin-top: 90px;
+    }
 }

@@ -23,6 +23,7 @@
 .signup-link{
     color: #ee661a;
     text-decoration: none;
+    cursor: pointer;
 }
 .hr-line{
     display: flex;

@@ -1,3 +1,6 @@
+.card{
+    width: 18rem;
+}
 .card img{
     height: 270px;
 }
@@ -14,4 +17,9 @@
     font-size: 16px;
     font-weight: bolder;
     border-radius: 5px;
+}
+@media only screen and (max-width: 290px) {
+    .card{
+        width: 16rem;
+    }
 }

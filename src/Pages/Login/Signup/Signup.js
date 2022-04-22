@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
@@ -16,16 +16,17 @@ const Signup = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-        loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+
+    const [sendEmailVerification] = useSendEmailVerification(auth);
 
 
     if (user) {
         navigate('/home');
     }
 
-    const handleOnSubmit = event => {
+    const handleOnSubmit = async(event) => {
         event.preventDefault();
 
         const email = emailRef.current.value;
@@ -37,7 +38,10 @@ const Signup = () => {
             return;
         }
         else {
-            createUserWithEmailAndPassword(email, password);
+            await createUserWithEmailAndPassword(email, password);
+            await sendEmailVerification();
+            alert('Sent email');
+
             setDefaultError('')
         }
     }
@@ -50,7 +54,7 @@ const Signup = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control ref={passwordRef} type="Enter password" placeholder="Password" required />
+                    <Form.Control ref={passwordRef} type="password" placeholder="Enter Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Control ref={confirmPasswordRef} type="password" placeholder="Confirm Password" required />
@@ -58,7 +62,7 @@ const Signup = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check onClick={() => setAgree(!agree)} type="checkbox" label="I agree to the terms and conditions above" />
                 </Form.Group>
-                <p>{error?.message}</p>
+                <p style={{ color: 'red' }}>{error?.message}</p>
                 <p style={{ color: 'red' }}>{defaultError}</p>
                 <Button
                     className='submit-btn'
