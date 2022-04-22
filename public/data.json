@@ -1,20 +1,20 @@
 [
     {
-      "id": "62604c9a5c35e5c10e165ad0",
+      "id": "1",
       "image": "https://i.ibb.co/H27XXdJ/service1.jpg",
       "price": 44.70,
       "name": "Corporate Events",
       "description": "Take a look at my corporate packages or make your own."
     },
     {
-      "id": "62604c9a49c68fa9d1ec10d7",
+      "id": "2",
       "image": " https://i.ibb.co/NmZG75J/service2.jpg",
       "price": 17.50,
       "name": "Meetings",
       "description": "Order catering from me for your next business lunch."
     },
     {
-      "id": "62604c9a4b32ee30531fbdcd",
+      "id": "3",
       "image": "https://i.ibb.co/Wfv8sDd/service3.jpg",
       "price": 50.90,
       "name": "Marriage Events",

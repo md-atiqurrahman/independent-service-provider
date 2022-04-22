@@ -1,11 +1,12 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 
 const Signup = () => {
-    const [defaultError,setDefaultError] = useState('');
+    const [agree, setAgree] = useState(false);
+    const [defaultError, setDefaultError] = useState('');
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const confirmPasswordRef = useRef('');
@@ -58,11 +59,14 @@ const Signup = () => {
                     <Form.Control ref={confirmPasswordRef} type="password" placeholder="Confirm Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
+                    <Form.Check onClick={() => setAgree(!agree)} type="checkbox" label="I agree to the terms and conditions above" />
                 </Form.Group>
                 <p>{error?.message}</p>
-                <p style={{color: 'red'}}>{defaultError}</p>
-                <Button variant="primary" type="submit">
+                <p style={{ color: 'red' }}>{defaultError}</p>
+                <Button
+                    disabled={!agree}
+                    variant="primary"
+                    type="submit">
                     Submit
                 </Button>
                 <p className='signup-text'>Already have an account?
