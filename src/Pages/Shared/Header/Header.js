@@ -22,8 +22,7 @@ const Header = () => {
             <Container className='nav-text-container' >
                 <div>
                     <Navbar.Brand href="#home" className='logo-container'>
-                        <img src={logo} alt="" />
-                        <h3>Catering By Ozdemir</h3>
+                     <img src={logo} alt="" />
                     </Navbar.Brand>
                 </div>
                 <div>

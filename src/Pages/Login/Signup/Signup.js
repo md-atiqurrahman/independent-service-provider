@@ -46,16 +46,13 @@ const Signup = () => {
             <h1>Please Sign up</h1>
             <Form onSubmit={handleOnSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
+                    <Form.Control ref={passwordRef} type="Enter password" placeholder="Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Confirm Password</Form.Label>
                     <Form.Control ref={confirmPasswordRef} type="password" placeholder="Confirm Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
@@ -64,6 +61,7 @@ const Signup = () => {
                 <p>{error?.message}</p>
                 <p style={{ color: 'red' }}>{defaultError}</p>
                 <Button
+                    className='submit-btn'
                     disabled={!agree}
                     variant="primary"
                     type="submit">
