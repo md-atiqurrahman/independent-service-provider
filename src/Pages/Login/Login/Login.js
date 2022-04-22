@@ -1,9 +1,10 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import {useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './Login.css';
+import google from '../../../images/Social/google.png';
 
 
 const Login = () => {
@@ -19,11 +20,20 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
 
-   if(user){
-       navigate(from, { replace: true });
-   }
+    const
+        [
+            signInWithGoogle,
+            googleUser,
+            googleLoading,
+            googleError
+        ] = useSignInWithGoogle(auth);
+
+    if (user || googleUser)
+     {
+        navigate(from, { replace: true });
+    }
 
 
     const handleOnSubmit = event => {
@@ -48,13 +58,16 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
-                <p style={{color: 'red'}}>{error?.message}</p>
+                <p style={{ color: 'red' }}>{error?.message}</p>
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
                 <p className='signup-text'>New to Catering by Odzemir ?
                     <Link className='signup-link' to='/signup'> Please Sign up</Link>
                 </p>
+                <button className='google-btn' onClick={() =>  signInWithGoogle()}>
+                    <img style={{ marginRight: '5px',width: '36px',height: '36px'}} src={google} alt="" />
+                    Continue with Google</button>
             </Form>
         </div>
     );

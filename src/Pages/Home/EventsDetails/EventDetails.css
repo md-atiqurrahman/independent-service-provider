@@ -19,6 +19,12 @@
     text-decoration: none;
 }
 .event-details .event-name{
+    color:  rgb(238, 102, 26);
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+}
+.event-details .btn-text{
     color:  white;
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 30px;

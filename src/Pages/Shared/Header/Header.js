@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import './Header.css';
 import logo from '../../../images/Header/logo.png';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
@@ -11,9 +11,11 @@ import { signOut } from 'firebase/auth';
 
 const Header = () => {
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
 
     const handleSignOut = () =>{
         signOut(auth);
+       
     }
     return (
         <Navbar bg="light" expand="lg" sticky='top'>
