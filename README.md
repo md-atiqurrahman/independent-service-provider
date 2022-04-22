@@ -2,19 +2,19 @@
 
 This is my project [Live site link](https://independent-service-prov-47fa3.web.app/).
 
-  *Description of different features and functionality of my project
+  * Description of different features and functionality of my project
 
-       *I use custom hooks in my project.
-       *I use firebase authentication system for login or sign-up
-       *My project Home component is responsive in all mobile and Desktop devices.
-       *Some component is protected by private route in my project.
-       *I use optimized and compressed image in my project.
-       *A list of technologies which are used in my project.
-          *1.React.js
-          *2.React-bootstrap
-          *3.React-Router
-          *4.React-Firebase-hooks
-          *5.React-Toastify
+       * I use custom hooks in my project.
+       * I use firebase authentication system for login or sign-up
+       * My project Home component is responsive in all mobile and Desktop devices.
+       * Some component is protected by private route in my project.
+       * I use optimized and compressed image in my project.
+       * A list of technologies which are used in my project.
+          * 1.React.js
+          * 2.React-bootstrap
+          * 3.React-Router
+          * 4.React-Firebase-hooks
+          * 5.React-Toastify
 
 
 ## Available Scripts
