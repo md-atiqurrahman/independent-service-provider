@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Button, Form, Toast } from 'react-bootstrap';
+import { Button, Form} from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -23,6 +23,7 @@ const Login = () => {
     const [
         signInWithEmailAndPassword,
         user,
+        loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
 

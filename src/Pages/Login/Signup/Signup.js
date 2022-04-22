@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Spinner } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
@@ -16,17 +16,23 @@ const Signup = () => {
     const [
         createUserWithEmailAndPassword,
         user,
+        loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth);
 
     const [sendEmailVerification] = useSendEmailVerification(auth);
 
 
     if (user) {
         navigate('/home');
+        return (
+            <div style={{ margin: '200px', textAlign: 'center' }}>
+                <Spinner animation="border" variant="secondary" />
+            </div>
+        )
     }
 
-    const handleOnSubmit = async(event) => {
+    const handleOnSubmit = async (event) => {
         event.preventDefault();
 
         const email = emailRef.current.value;
@@ -40,10 +46,9 @@ const Signup = () => {
         else {
             await createUserWithEmailAndPassword(email, password);
             await sendEmailVerification();
-            alert('Sent email');
-
             setDefaultError('')
-        }
+        }     
+
     }
     return (
         <div className='form-container'>

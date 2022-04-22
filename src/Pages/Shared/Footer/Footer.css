@@ -2,7 +2,7 @@ footer {
     background-color: #161616;
     height: 172px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -10,13 +10,12 @@ footer {
     margin-bottom: 0;
     font-family: 'Nanum Gothic', sans-serif;
     color: white;
-    margin-left: 119px;
 }
 
 .web-maker p {
     font-family: 'Nanum Gothic', sans-serif;
     color: white;
-    margin-right: 119px;
+    margin-top: 13px;
 }
 
 .web-maker p .company-name {
