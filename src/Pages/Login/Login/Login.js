@@ -47,24 +47,27 @@ const Login = () => {
 
     return (
         <div className='form-container'>
-            <h1>Please login</h1>
-            <Form onSubmit={handleOnSubmit}>
+            <h1>Please Login</h1>
+            <Form className='form' onSubmit={handleOnSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
                     <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
                 <p style={{ color: 'red' }}>{error?.message}</p>
-                <Button variant="primary" type="submit">
+                <Button className='submit-btn' variant="primary" type="submit">
                     Submit
                 </Button>
                 <p className='signup-text'>New to Catering by Odzemir ?
                     <Link className='signup-link' to='/signup'> Please Sign up</Link>
                 </p>
+                <div className='hr-line'>
+                    <hr />
+                    <p>or</p>
+                    <hr />
+                </div>
                 <button className='google-btn' onClick={() =>  signInWithGoogle()}>
                     <img style={{ marginRight: '5px',width: '36px',height: '36px'}} src={google} alt="" />
                     Continue with Google</button>

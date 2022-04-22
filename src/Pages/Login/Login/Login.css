@@ -3,21 +3,41 @@
     margin: 50px auto;
     
 }
-.form-container h1{
+.form-container form{
+    width: 70%;
+    margin: 0 auto;
     text-align: center;
 }
+.form-container h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.form-container .submit-btn{
+    width: 50%;
+    padding: 8px;
+    margin-top: 10px;
+}
 .signup-text{
-    margin-top: 15px;
+    margin-top: 20px;
 }
 .signup-link{
     color: #ee661a;
     text-decoration: none;
 }
+.hr-line{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+.hr-line hr{
+   width: 40%;
+}
 .form-container .google-btn{
     width: 50%;
+    margin: 10px auto 0;
     border: none;
     border: 1px solid rgb(172, 169, 169);
-    padding: 8px;
+    padding: 2px;
     border-radius: 5px;
     color: #ee661a;
     display: flex;
