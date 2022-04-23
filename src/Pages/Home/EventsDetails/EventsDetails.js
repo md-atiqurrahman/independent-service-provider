@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Outlet, useNavigate, useParams } from 'react-router-dom';
+import {  Outlet, useNavigate, useParams } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import './EventDetails.css';
 
