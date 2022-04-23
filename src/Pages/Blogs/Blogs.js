@@ -9,7 +9,11 @@ const Blogs = () => {
 
             <h3>2.Why are you using firebase? What other options do you have to implement authentication?
             </h3>
-            <p>Ans:I am using firebase authentication for my app because i can allow users in to my app using multiple sign-in method including email and password sign-in .Without email and password sign-in system firebase has some popular  third party identity provider like(google,facebook,github,twitter e.t.c ) sign-in system.For implement authentication i can use Back4App,Backendless,Parse,Kuzzle,AWS Amplify e.t.c as firebase alternatives.</p>
+            <p>Ans:I am using firebase authentication for my app because i can allow users in to my app using multiple sign-in method including email and password sign-in .Without email and password sign-in system firebase has some popular  third party identity provider 
+            like(google,facebook,github,twitter e.t.c )
+            sign-in system.For implement authentication i can use 
+            Back4App,Backendless,Parse,Kuzzle,
+            AWS Amplify e.t.c as firebase alternatives.</p>
             <h3>3.What other services does firebase provide than  other authentication?
             </h3>
             <p>Ans: Firebase authentication system is quite better than any other authentication.Firebase  is better for many reasons than other authentication  system. Among them it's give us ready-made UI libraries,backend services,we can easily use SDKs in firebase and also gives us multiple sign in method including popular third party identity provider sign-in system. </p>

@@ -1,9 +1,15 @@
-footer {
+.footer-container {
+    min-height: 45vh;
+    display: flex;
+    flex-direction: column;
+}
+.footer-container footer {
     background-color: #161616;
-    height: 172px;
+    min-height: 172px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: auto;
 }
 
 .copyright-text p {

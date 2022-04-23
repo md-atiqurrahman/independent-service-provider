@@ -6,6 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { signOut } from 'firebase/auth';
+import CustomLink from '../CustomLink/CustomLink';
 
 
 
@@ -29,10 +30,10 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto link-names">
-                            <Nav.Link as={Link} to='/home'>Home</Nav.Link>
-                            <Nav.Link as={Link} to="/about">About me</Nav.Link>
-                            <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
-                            <Nav.Link as={Link} to="/login">
+                            <CustomLink as={Link} to='/home'>Home</CustomLink>
+                            <CustomLink as={Link} to="/about">About me</CustomLink>
+                            <CustomLink as={Link} to="/blogs">Blogs</CustomLink>
+                            <CustomLink as={Link} to="/login">
                                 {
                                     user
                                         ?
@@ -40,7 +41,7 @@ const Header = () => {
                                         :
                                     'Login'
                                 }
-                            </Nav.Link>
+                            </CustomLink>
                         </Nav>
                     </Navbar.Collapse>
                 </div>

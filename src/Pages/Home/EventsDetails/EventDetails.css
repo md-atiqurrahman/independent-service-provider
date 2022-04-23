@@ -1,32 +1,98 @@
-.event-details{
+.event-details-container{
+  margin-bottom: 20px;
+}
+.event-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding-top: 50px;
-    padding-bottom: 200px;
+    margin-bottom: 50px;
 }
-.event-details h1{
-    color:black;
+
+.event-details .form-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 0 107px;
+    width: 40%;
+}
+.event-details .form-container .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    width: 80%;
+    padding: 20px 60px 60px 60px;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.event-details h1 {
+    color: black;
     font-family: 'Nanum Gothic', sans-serif;
-    font-size: 40px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.event-details .event-name {
+    color: rgb(238, 102, 26);
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 22px;
     font-weight: 400;
 }
-.event-details button{
-    background-color:rgb(238, 102, 26) ;
-    border: none;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-.event-details a{
-    text-decoration: none;
-}
-.event-details .event-name{
-    color:  rgb(238, 102, 26);
+
+.event-details .btn-text {
+    color: white;
     font-family: 'Nanum Gothic', sans-serif;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 400;
 }
-.event-details .btn-text{
-    color:  white;
-    font-family: 'Nanum Gothic', sans-serif;
-    font-size: 30px;
-    font-weight: 400;
+
+
+@media only screen and (max-width: 688px) {
+    .event-details{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .event-details .form-container{
+        width: 100%;
+        margin-left: 0;
+    }
+    .event-details .form-container .form {
+        width: 100%;
+    }
+    .event-details .card-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .event-details{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .event-details .form-container{
+        width: 80%;
+        margin-left: 0;
+    }
+    .event-details .form-container .form {
+        width: 75%;
+    }
+    .event-details .card-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 }

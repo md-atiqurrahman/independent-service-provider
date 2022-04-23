@@ -6,7 +6,7 @@ This is my project [Live site link](https://independent-service-prov-47fa3.web.a
 
        * I use custom hooks in my project.
        * I use firebase authentication system for login or sign-up
-       * My project Home component is responsive in all mobile and Desktop devices.
+       * My project  is responsive in mobile, tablet and Desktop devices.
        * Some component is protected by private route in my project.
        * I use optimized and compressed image in my project.
        * A list of technologies which are used in my project.

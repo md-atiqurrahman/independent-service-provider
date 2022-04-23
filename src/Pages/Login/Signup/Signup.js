@@ -47,8 +47,7 @@ const Signup = () => {
             await createUserWithEmailAndPassword(email, password);
             await sendEmailVerification();
             setDefaultError('')
-        }     
-
+        }
     }
     return (
         <div className='form-container'>

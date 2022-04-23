@@ -1,5 +1,18 @@
-.blogs{
-    width: 60%;
+.blogs {
+    width: 70%;
     margin: 50px auto;
     text-align: justify;
+}
+
+@media only screen and (max-width: 688px) {
+    .blogs {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .blogs {
+        width: 90%;
+        margin: 120px auto;
+    }
 }
